@@ -1,8 +1,8 @@
 Markdown## Machine Learning Operations 1
 ## CEIA - FIUBA
-## 5º Bimestre 2025
+## 5º Bimestre 2025. Fecha de entrega 14/12/25
 
-## Trabajo Práctico Final
+## Trabajo Práctico Final.
 
 ### Grupo
 
@@ -15,13 +15,13 @@ Autor: Juan Nervi
 
 El presente servicio representa una solución basada en IA para la predicción confiable de la tasa de deformación diametral (**MeanRateOutDiam**) en tubos de presión de la Central Nuclear Embalse (CNE), Argentina, durante la Inspección en Servicio ISI 2024.
 
-El modelo utiliza mediciones de diámetro interno, espesor, flujo neutrónico extendido, presión y temperatura para predecir la evolución de la deformación. El usuario selecciona un canal (ej: E06) y el servicio devuelve la predicción completa a lo largo del tubo, junto con valores reales y métricas.
+El modelo utiliza mediciones de diámetro interno, espesor, flujo neutrónico, presión hidráulica y temperatura para predecir la evolución de la deformación mecánica producida por los efectos del medioambiente en el núcleo del reactor. El usuario selecciona un canal (ej: E06) y el servicio devuelve la predicción completa a lo largo del tubo, junto con valores reales y métricas.
 
 ## Fuente
 
-Los datos provienen de mediciones reales ISI 2024 (diámetro y espesor por canal), bases de flujo neutrónico, perfiles de presión/temperatura BOL y datos de diseño de canales.
+Los datos provienen de mediciones de ISI 2024 (diámetro y espesor por canal), bases de flujo neutrónico, perfiles de presión/temperatura BOL (comienzo de vida) y datos de diseño de canales. Se ha agregado una variable aleatoria a los datos con fines de protección de la información.
 
-El pipeline ETL procesa ~380 canales, genera flujo extendido, unifica mediciones y enriquece con variables operativas.
+El pipeline ETL procesa ~380 canales refrigerantes, genera una distribución de flujo neutrónico a partir de valores discretos, unifica mediciones y enriquece con variables operativas.
 
 ## Componentes del proyecto
 
